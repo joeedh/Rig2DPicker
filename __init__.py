@@ -1,5 +1,16 @@
 import bpy, imp
 
+bl_info = {
+    "name": "2D Bone Picker",
+    "description": "Builds 2D bone picker UIs",
+    "author": "Joe Eagar",
+     "location": "Properties -> Armature",
+    "version": (1, 0),
+    "blender": (2, 80, 0),
+    "support": "COMMUNITY",
+    "category": "Rigging",
+}
+
 __all__ = [
   "global", "layout", "props", "ui"
 ]
