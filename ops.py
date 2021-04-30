@@ -39,6 +39,7 @@ class ImportLayouts(bpy.types.Operator, ImportHelper):
     """This appears in the tooltip of the operator and in the generated docs"""
     bl_idname = "import.layout2d_layouts"  # important since its how bpy.ops.import_test.some_data is constructed
     bl_label = "Import Layouts (rig2dpick)"
+    bl_options = {"UNDO"}
 
     # ExportHelper mixin class uses this
     filename_ext = ".json"
@@ -97,6 +98,32 @@ class AddLayoutRow(Layout2dOp):
       
         return {'FINISHED'}
 
+
+class ToggleEmphasis(Layout2dOp):
+    """Tooltip"""
+    bl_idname = "object.layout2d_item_toggle_emphasis"
+    bl_label = "Toggle Layout Item Emphasis (rig2dpick)"
+    bl_options = {"UNDO"}
+
+    layout : StringProperty()
+    row : IntProperty()
+    item : IntProperty()
+
+    def execute(self, context):
+        arm = context.active_object.data 
+        layout = arm.layouts2d.get(self.layout)
+
+        if not layout:
+          print("invalid layout '%s'" % (self.layout))
+          return {'CANCELLED'}
+      
+        lrow = layout.rows[self.row]
+        item = lrow.items[self.item]
+
+        item.emphasis ^= True
+      
+        return {'FINISHED'}
+
 class DeleteLayoutRow(Layout2dOp):
     """Tooltip"""
     bl_idname = "object.layout2d_delete_row"
@@ -148,6 +175,7 @@ class AddLayoutItem(Layout2dOp):
 
         item = lrow.insert(self.before_item)
         item.bone = context.active_bone.name
+        item.label = item.bone
 
         return {'FINISHED'}
 
@@ -320,8 +348,7 @@ class DeleteLayout(Layout2dOp):
 
         return {'FINISHED'}
 
-
-class SeleteBone(Layout2dOp):
+class SelectBone(Layout2dOp):
     """Tooltip"""
     bl_idname = "object.layout2d_select_bone"
     bl_label = "Select Bone (rig2dpick)"
@@ -357,5 +384,5 @@ class SeleteBone(Layout2dOp):
 
 
 bpy_exports = [AddLayoutRow, AddLayout, SetActiveLayout, DeleteLayout, 
-DeleteLayoutRow, AddLayoutItem, SeleteBone, DeleteLayoutItem, IncLayoutItemPrePad,
-ShfitLayoutItem, ExportLayouts, ImportLayouts]
+DeleteLayoutRow, AddLayoutItem, SelectBone, DeleteLayoutItem, IncLayoutItemPrePad,
+ShfitLayoutItem, ExportLayouts, ImportLayouts, ToggleEmphasis]

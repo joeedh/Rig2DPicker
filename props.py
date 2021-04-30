@@ -8,23 +8,34 @@ bpy_exports = []
 
 class RigLayoutItem(bpy.types.PropertyGroup):
   bone : StringProperty()
+  label : StringProperty() #if empty string, bone name will be used
   prePad : IntProperty()
+  emphasis : BoolProperty()
 
   def load(self, b):
     self.bone = b.bone
     self.prePad = b.prePad
+    self.label = b.label
+    self.emphasis = b.emphasis
 
     return self
-
+      
   def toJSON(self):
     return {
       "bone" : self.bone,
-      "prePad" : self.prePad
+      "prePad" : self.prePad,
+      "label" : self.label,
+      "emphasis" : self.emphasis
     }
   
   def loadJSON(self, json):
     self.bone = json["bone"]
     self.prePad = json["prePad"]
+
+    if "emphasis" in json:
+      self.emphasis = json["emphasis"]
+
+    self.label = json["label"]
 
     return self
 
@@ -141,11 +152,27 @@ class RigLayout2d(bpy.types.PropertyGroup):
 
 bpy.utils.register_class(RigLayout2d)
 
+ADDON_VERSION = 1
+
 class RigLayouts(bpy.types.PropertyGroup):
   layouts : CollectionProperty(type=RigLayout2d)
+  version : IntProperty(default=ADDON_VERSION)
+
   active_layout : StringProperty()
   edit_mode : BoolProperty()
-  edit_type : EnumProperty(items=[("EDIT", "Edit", "", 0), ("MOVE", "Move", "", 1)])
+  edit_type : EnumProperty(items=[
+    ("EDIT", "Edit", "", 0), 
+    ("MOVE", "Move", "", 1),
+    ("LABELS", "Labels", "", 2),
+    ("EMPHASIS", "Emphasis", "", 3)
+  ])
+
+  def handleVersionChanges(self):
+    if self.version < 1:
+      for layout in self.layouts:
+        for row in layout.rows:
+          for item in row.items:
+            item.label = item.bone
 
   def toJSON(self):
     layouts = []

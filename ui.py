@@ -27,23 +27,21 @@ class Rig2dPickPanel(bpy.types.Panel):
         
         layouts2d = arm.layouts2d 
 
-        edit_mode = layouts2d.edit_mode
-        edit_type = layouts2d.edit_type
-
         row = ui.row() 
         row.operator("export.layout2d_layouts")
         row.operator("import.layout2d_layouts")
         
-        move_mode = edit_mode and edit_type == "MOVE"
-        
-        if edit_mode:
+        move_mode = layouts2d.edit_mode and layouts2d.edit_type == "MOVE"
+        labels_mode = layouts2d.edit_mode and layouts2d.edit_type == "LABELS"
+        emphasis_mode = layouts2d.edit_mode and layouts2d.edit_type == "EMPHASIS"
+        edit_mode = layouts2d.edit_mode and layouts2d.edit_type == "EDIT"
+
+        if layouts2d.edit_mode:
           row = ui.row()
           row.prop(layouts2d, "edit_mode")
           row.prop(layouts2d, "edit_type")
         else:
           ui.prop(layouts2d, "edit_mode")
-
-        edit_mode = edit_mode and edit_type == "EDIT"
         
         row = ui.row()
         for layout in layouts2d.layouts:
@@ -106,8 +104,32 @@ class Rig2dPickPanel(bpy.types.Panel):
               for k in range(item.prePad):
                 row2.label(text=" ")
 
-              props = row2.operator("object.layout2d_select_bone", text=item.bone)
-              props.bone = item.bone
+              if item.emphasis:
+                box = row2.box()
+                box.alignment = "LEFT"
+              else:
+                box = row2
+
+              bone = item.bone
+              if bone in arm.bones and arm.bones[bone].select:
+                box = box.box()
+                box.alignment = "LEFT"
+                box.alert = True
+                print(dir(box))
+
+              label = item.bone if item.label == "" else item.label
+
+              if labels_mode:
+                box.prop(item, "label", text="")
+              elif emphasis_mode:
+                props = box.operator("object.layout2d_item_toggle_emphasis", text=label)
+                props.layout = layout.name
+                props.row = i
+                props.item = j
+              else:
+                props = box.operator("object.layout2d_select_bone", text=label)
+                props.bone = item.bone
+                pass
 
               if move_mode:
                 props = row2.operator("object.layout2d_shift_item", icon="TRIA_RIGHT", text="")
@@ -117,7 +139,6 @@ class Rig2dPickPanel(bpy.types.Panel):
                 props.direction = 1
 
                 #row2.label(text=" ")
-
 
             if edit_mode:
               props = row.operator("object.layout2d_add_item", icon="PLUS", text="")
