@@ -7,8 +7,8 @@ __all__ = [
 from . import layout, props, ui, ops
 
 imp.reload(props)
-imp.reload(ops)
 imp.reload(layout)
+imp.reload(ops)
 imp.reload(ui)
 
 registered = False

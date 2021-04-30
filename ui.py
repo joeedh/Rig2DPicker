@@ -9,7 +9,7 @@ class Rig2dPickPanel(bpy.types.Panel):
     bl_idname = "SCENE_PT_layout2d"
     bl_space_type = 'PROPERTIES'
     bl_region_type = 'WINDOW'
-    bl_context = "scene"
+    bl_context = "data"
 
     def draw(self, context):
         ui = self.layout
@@ -30,6 +30,10 @@ class Rig2dPickPanel(bpy.types.Panel):
         edit_mode = layouts2d.edit_mode
         edit_type = layouts2d.edit_type
 
+        row = ui.row() 
+        row.operator("export.layout2d_layouts")
+        row.operator("import.layout2d_layouts")
+        
         move_mode = edit_mode and edit_type == "MOVE"
         
         if edit_mode:
@@ -54,19 +58,12 @@ class Rig2dPickPanel(bpy.types.Panel):
 
         row = ui.row()
         row.label(text=layout.name)
-        props = row.operator("object.layout2d_delete", icon="TRASH")
-        if props:
-          props.layout = layout.name
 
         if edit_mode:
-          row = ui.row(align=True)
-          row.alignment = "LEFT"
-          props = row.operator("object.layout2d_add_row", icon="PLUS", text="Add Row")
+          props = row.operator("object.layout2d_delete", icon="TRASH")
           props.layout = layout.name
-          props.before_row = 0
 
-        if len(layout.rows) == 0:
-          return
+          row.prop(layout, "name")
 
         for i, lrow in enumerate(layout.rows):
             if edit_mode:
@@ -76,10 +73,12 @@ class Rig2dPickPanel(bpy.types.Panel):
               props = row.operator("object.layout2d_delete_row", icon="TRASH", text="Delete Row")
               props.layout = layout.name
               props.row = i
-
+              
+              #"""
               props = row.operator("object.layout2d_add_row", icon="PLUS", text="Insert Row")
               props.layout = layout.name
-              props.before_row = i + 1
+              props.before_row = i
+              #"""
 
             row = ui.row(align=True)
             row.alignment = "CENTER"
@@ -98,17 +97,11 @@ class Rig2dPickPanel(bpy.types.Panel):
                 props.row = i
                 props.item = j
               elif move_mode:
-                props = row2.operator("object.layout2d_inc_item_prepad", icon="TRIA_LEFT", text="")
+                props = row2.operator("object.layout2d_shift_item", icon="TRIA_LEFT", text="")
                 props.layout = layout.name
                 props.row = i
                 props.item = j
-                props.subtract = True
-
-                props = row2.operator("object.layout2d_inc_item_prepad", icon="TRIA_RIGHT", text="")
-                props.layout = layout.name
-                props.row = i
-                props.item = j
-                props.subtract = False
+                props.direction = -1
 
               for k in range(item.prePad):
                 row2.label(text=" ")
@@ -116,10 +109,27 @@ class Rig2dPickPanel(bpy.types.Panel):
               props = row2.operator("object.layout2d_select_bone", text=item.bone)
               props.bone = item.bone
 
+              if move_mode:
+                props = row2.operator("object.layout2d_shift_item", icon="TRIA_RIGHT", text="")
+                props.layout = layout.name
+                props.row = i
+                props.item = j
+                props.direction = 1
+
+                #row2.label(text=" ")
+
+
             if edit_mode:
               props = row.operator("object.layout2d_add_item", icon="PLUS", text="")
               props.layout = layout.name
               props.row = i
               props.before_item = len(lrow.items)
+
+        if edit_mode:
+          row = ui.row(align=True)
+          row.alignment = "LEFT"
+          props = row.operator("object.layout2d_add_row", icon="PLUS", text="Add Row")
+          props.layout = layout.name
+          props.before_row = len(layout.rows)
 
 bpy_exports = [Rig2dPickPanel]
