@@ -5,7 +5,7 @@ bl_info = {
     "description": "Builds 2D bone picker UIs",
     "author": "Joe Eagar",
      "location": "Properties -> Armature",
-    "version": (1, 1),
+    "version": (1, 2),
     "blender": (2, 80, 0),
     "support": "COMMUNITY",
     "category": "Rigging",
