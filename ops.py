@@ -355,6 +355,7 @@ class SelectBone(Layout2dOp):
     bl_options = {"UNDO"}
 
     bone : StringProperty()
+    select_multiple : BoolProperty()
 
     def execute(self, context):
         rigob = context.active_object
@@ -367,14 +368,19 @@ class SelectBone(Layout2dOp):
         arm = rigob.data 
         pose = rigob.pose 
 
-        if rigob.mode == "EDIT":
-          bpy.ops.armature.select_all(action="DESELECT")
-        else:
-          bpy.ops.pose.select_all(action="DESELECT")
+        if not self.select_multiple:
+          if rigob.mode == "EDIT":
+            bpy.ops.armature.select_all(action="DESELECT")
+          else:
+            bpy.ops.pose.select_all(action="DESELECT")
 
         bone = arm.bones[self.bone]
-        bone.select = True
-        arm.bones.active = bone
+        if not bone.select or not self.select_multiple:
+          bone.select = True
+          arm.bones.active = bone
+        else:
+          bone.select = False
+
         #arm.update_tag()
 
         #if posemode:

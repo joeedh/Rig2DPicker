@@ -41,7 +41,9 @@ class Rig2dPickPanel(bpy.types.Panel):
           row.prop(layouts2d, "edit_mode")
           row.prop(layouts2d, "edit_type")
         else:
-          ui.prop(layouts2d, "edit_mode")
+          row = ui.row() 
+          row.prop(layouts2d, "edit_mode")
+          row.prop(layouts2d, "select_multiple")
         
         row = ui.row()
         for layout in layouts2d.layouts:
@@ -115,7 +117,6 @@ class Rig2dPickPanel(bpy.types.Panel):
                 box = box.box()
                 box.alignment = "LEFT"
                 box.alert = True
-                print(dir(box))
 
               label = item.bone if item.label == "" else item.label
 
@@ -129,6 +130,7 @@ class Rig2dPickPanel(bpy.types.Panel):
               else:
                 props = box.operator("object.layout2d_select_bone", text=label)
                 props.bone = item.bone
+                props.select_multiple = layouts2d.select_multiple
                 pass
 
               if move_mode:

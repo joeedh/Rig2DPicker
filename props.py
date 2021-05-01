@@ -166,6 +166,7 @@ class RigLayouts(bpy.types.PropertyGroup):
     ("LABELS", "Labels", "", 2),
     ("EMPHASIS", "Emphasis", "", 3)
   ])
+  select_multiple : BoolProperty()
 
   def handleVersionChanges(self):
     if self.version < 1:
