@@ -8,5 +8,7 @@ for f in files:
     continue
   
   zfile.write(f, "rig2dpick/" + f)
-  
+
+zfile.write(f, "rig2dpick/rigify_human.json")
+
 
