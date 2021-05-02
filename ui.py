@@ -14,7 +14,6 @@ class Rig2dPickPanel(bpy.types.Panel):
     def draw(self, context):
         ui = self.layout
 
-        ui.operator("object.layout2d_add")
         ob = context.active_object
 
         if not ob:
@@ -35,6 +34,11 @@ class Rig2dPickPanel(bpy.types.Panel):
         labels_mode = layouts2d.edit_mode and layouts2d.edit_type == "LABELS"
         emphasis_mode = layouts2d.edit_mode and layouts2d.edit_type == "EMPHASIS"
         edit_mode = layouts2d.edit_mode and layouts2d.edit_type == "EDIT"
+
+        if edit_mode:
+          row = ui.row()
+          row.operator("object.layout2d_add")
+          row.operator("object.layout2d_duplicate")
 
         if layouts2d.edit_mode:
           row = ui.row()

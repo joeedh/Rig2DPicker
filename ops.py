@@ -284,6 +284,39 @@ class AddLayout(Layout2dOp):
 
         return {'FINISHED'}
 
+class DuplicateLayout(Layout2dOp):
+    """Tooltip"""
+    bl_idname = "object.layout2d_duplicate"
+    bl_label = "Duplicate Layout (rig2dpick)"
+    bl_options = {"UNDO"}
+
+    def execute(self, context):
+        basename = "Layout"
+        i = 2
+
+        rigob = context.active_object
+        arm = rigob.data
+
+        actlayout = arm.layouts2d.getActive()
+
+        if actlayout:
+          basename = actlayout.name
+
+        #ensure unique name
+        name = basename
+        while arm.layouts2d.get(name):
+          name = "%s%i" % (basename, i)
+          i += 1
+
+        layout = arm.layouts2d.layouts.add()
+        layout.name = name
+
+        if actlayout:
+          layout.load(actlayout, setName=False)
+
+        arm.layouts2d.active_layout = layout.name 
+
+        return {'FINISHED'}
 
 class SetActiveLayout(Layout2dOp):
     """Tooltip"""
@@ -391,4 +424,4 @@ class SelectBone(Layout2dOp):
 
 bpy_exports = [AddLayoutRow, AddLayout, SetActiveLayout, DeleteLayout, 
 DeleteLayoutRow, AddLayoutItem, SelectBone, DeleteLayoutItem, IncLayoutItemPrePad,
-ShfitLayoutItem, ExportLayouts, ImportLayouts, ToggleEmphasis]
+ShfitLayoutItem, ExportLayouts, ImportLayouts, ToggleEmphasis, DuplicateLayout]

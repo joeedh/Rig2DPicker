@@ -120,6 +120,18 @@ class RigLayout2d(bpy.types.PropertyGroup):
       "name" : self.name
     }
   
+  def load(self, b, setName=False):
+    self.rows.clear()
+
+    if setName:
+      self.name = b.name
+
+    for lrow1 in b.rows:
+      lrow2 = self.rows.add()
+      lrow2.load(lrow1)
+
+    return self
+
   def loadJSON(self, json):
     self.name = json["name"]
     self.rows.clear()
@@ -159,8 +171,8 @@ class RigLayouts(bpy.types.PropertyGroup):
   version : IntProperty(default=ADDON_VERSION)
 
   active_layout : StringProperty()
-  edit_mode : BoolProperty()
-  edit_type : EnumProperty(items=[
+  edit_mode : BoolProperty(name="Enable Edit")
+  edit_type : EnumProperty(name="Edit Mode", items=[
     ("EDIT", "Edit", "", 0), 
     ("MOVE", "Move", "", 1),
     ("LABELS", "Labels", "", 2),

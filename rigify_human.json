@@ -1,0 +1,1101 @@
+{
+  "active_layout": "Hand.R",
+  "layouts": [
+    {
+      "rows": [
+        {
+          "items": [
+            {
+              "bone": "head",
+              "prePad": 0,
+              "label": "head",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "shoulder.R",
+              "prePad": 0,
+              "label": "shoulder.R",
+              "emphasis": false
+            },
+            {
+              "bone": "neck",
+              "prePad": 0,
+              "label": "neck",
+              "emphasis": false
+            },
+            {
+              "bone": "shoulder.L",
+              "prePad": 0,
+              "label": "shoulder.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "hand_ik.R",
+              "prePad": 0,
+              "label": "hand_ik.R",
+              "emphasis": true
+            },
+            {
+              "bone": "upper_arm_ik.R",
+              "prePad": 0,
+              "label": "upper_arm_ik.R",
+              "emphasis": false
+            },
+            {
+              "bone": "upper_arm_ik.L",
+              "prePad": 0,
+              "label": "upper_arm_ik.L",
+              "emphasis": false
+            },
+            {
+              "bone": "hand_ik.L",
+              "prePad": 0,
+              "label": "hand_ik.L",
+              "emphasis": true
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "chest",
+              "prePad": 0,
+              "label": "chest",
+              "emphasis": false
+            },
+            {
+              "bone": "spine_fk.003",
+              "prePad": 0,
+              "label": "spine_fk.003",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "breast.R",
+              "prePad": 0,
+              "label": "breast.R",
+              "emphasis": false
+            },
+            {
+              "bone": "breast.L",
+              "prePad": 0,
+              "label": "breast.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "spine_fk.002",
+              "prePad": 0,
+              "label": "spine_fk.002",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "spine_fk.001",
+              "prePad": 0,
+              "label": "spine_fk.001",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "torso",
+              "prePad": 0,
+              "label": "torso",
+              "emphasis": true
+            },
+            {
+              "bone": "hips",
+              "prePad": 0,
+              "label": "hips",
+              "emphasis": false
+            },
+            {
+              "bone": "spine_fk",
+              "prePad": 0,
+              "label": "spine_fk",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "thigh_ik.R",
+              "prePad": 0,
+              "label": "thigh_ik.R",
+              "emphasis": false
+            },
+            {
+              "bone": "thigh_ik.L",
+              "prePad": 0,
+              "label": "thigh_ik.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "foot_heel_ik.R",
+              "prePad": 0,
+              "label": "foot_heel_ik.R",
+              "emphasis": false
+            },
+            {
+              "bone": "foot_tweak.R",
+              "prePad": 0,
+              "label": "foot_tweak.R",
+              "emphasis": false
+            },
+            {
+              "bone": "foot_ik.R",
+              "prePad": 0,
+              "label": "FootMain.R",
+              "emphasis": true
+            },
+            {
+              "bone": "foot_spin_ik.R",
+              "prePad": 0,
+              "label": "foot_spin_ik.R",
+              "emphasis": false
+            },
+            {
+              "bone": "toe.R",
+              "prePad": 0,
+              "label": "toe.R",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "foot_heel_ik.L",
+              "prePad": 0,
+              "label": "foot_heel_ik.L",
+              "emphasis": false
+            },
+            {
+              "bone": "foot_tweak.L",
+              "prePad": 0,
+              "label": "foot_tweak.L",
+              "emphasis": false
+            },
+            {
+              "bone": "foot_ik.L",
+              "prePad": 0,
+              "label": "FootMain.L",
+              "emphasis": true
+            },
+            {
+              "bone": "foot_spin_ik.L",
+              "prePad": 0,
+              "label": "foot_spin_ik.L",
+              "emphasis": false
+            },
+            {
+              "bone": "toe.L",
+              "prePad": 0,
+              "label": "toe.L",
+              "emphasis": false
+            }
+          ]
+        }
+      ],
+      "name": "BodyIK"
+    },
+    {
+      "rows": [
+        {
+          "items": [
+            {
+              "bone": "head",
+              "prePad": 0,
+              "label": "head",
+              "emphasis": true
+            },
+            {
+              "bone": "neck",
+              "prePad": 0,
+              "label": "neck",
+              "emphasis": true
+            },
+            {
+              "bone": "tweak_spine.005",
+              "prePad": 0,
+              "label": "tweak_spine.005",
+              "emphasis": false
+            },
+            {
+              "bone": "tweak_spine.004",
+              "prePad": 0,
+              "label": "tweak_spine.004",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "brow.T.R.001",
+              "prePad": 0,
+              "label": "brow.T.R.001",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.T.R.002",
+              "prePad": 0,
+              "label": "brow.T.R.002",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.T.R.003",
+              "prePad": 0,
+              "label": "brow.T.R.003",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.T.L.003",
+              "prePad": 0,
+              "label": "brow.T.L.003",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.T.L.002",
+              "prePad": 0,
+              "label": "brow.T.L.002",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.T.L.001",
+              "prePad": 0,
+              "label": "brow.T.L.001",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "brow.B.R",
+              "prePad": 0,
+              "label": "brow.B.R",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.B.R.001",
+              "prePad": 0,
+              "label": "brow.B.R.001",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.B.R.002",
+              "prePad": 0,
+              "label": "brow.B.R.002",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.B.R.003",
+              "prePad": 0,
+              "label": "brow.B.R.003",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.B.L.003",
+              "prePad": 0,
+              "label": "brow.B.L.003",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.B.L.002",
+              "prePad": 0,
+              "label": "brow.B.L.002",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.B.L.001",
+              "prePad": 0,
+              "label": "brow.B.L.001",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.B.L",
+              "prePad": 0,
+              "label": "brow.B.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "brow.B.R.004",
+              "prePad": 0,
+              "label": "brow.B.R.004",
+              "emphasis": false
+            },
+            {
+              "bone": "nose",
+              "prePad": 0,
+              "label": "nose",
+              "emphasis": false
+            },
+            {
+              "bone": "brow.B.L.004",
+              "prePad": 0,
+              "label": "brow.B.L.004",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "lid.T.R",
+              "prePad": 0,
+              "label": "lid.T.R",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.T.R.001",
+              "prePad": 0,
+              "label": "lid.T.R.001",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.T.R.002",
+              "prePad": 0,
+              "label": "Lid.T.R",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.T.R.003",
+              "prePad": 0,
+              "label": "lid.T.R.003",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.T.L.003",
+              "prePad": 0,
+              "label": "lid.T.L.003",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.T.L.002",
+              "prePad": 0,
+              "label": "Lid.T.L",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.T.L.001",
+              "prePad": 0,
+              "label": "lid.T.L.001",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.T.L",
+              "prePad": 0,
+              "label": "lid.T.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "lid.B.R.003",
+              "prePad": 0,
+              "label": "lid.B.R.003",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.B.R.002",
+              "prePad": 0,
+              "label": "LidMaster.B.R",
+              "emphasis": true
+            },
+            {
+              "bone": "lid.B.R.001",
+              "prePad": 0,
+              "label": "lid.B.R.001",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.B.L.001",
+              "prePad": 0,
+              "label": "lid.B.L.001",
+              "emphasis": false
+            },
+            {
+              "bone": "lid.B.L.002",
+              "prePad": 0,
+              "label": "LidMaster.B.L",
+              "emphasis": true
+            },
+            {
+              "bone": "lid.B.L.003",
+              "prePad": 0,
+              "label": "lid.B.L.003",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "master_eye.R",
+              "prePad": 0,
+              "label": "master_eye.R",
+              "emphasis": false
+            },
+            {
+              "bone": "eyes",
+              "prePad": 0,
+              "label": "eyes",
+              "emphasis": true
+            },
+            {
+              "bone": "master_eye.L",
+              "prePad": 0,
+              "label": "master_eye.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "brow.T.R",
+              "prePad": 0,
+              "label": "brow.T.R",
+              "emphasis": false
+            },
+            {
+              "bone": "nose.R",
+              "prePad": 0,
+              "label": "nose.R",
+              "emphasis": true
+            },
+            {
+              "bone": "nose.001",
+              "prePad": 0,
+              "label": "nose.001",
+              "emphasis": false
+            },
+            {
+              "bone": "nose.L",
+              "prePad": 0,
+              "label": "nose.L",
+              "emphasis": true
+            },
+            {
+              "bone": "brow.T.L",
+              "prePad": 0,
+              "label": "brow.T.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "ear.R",
+              "prePad": 0,
+              "label": "ear.R",
+              "emphasis": true
+            },
+            {
+              "bone": "ear.R.002",
+              "prePad": 0,
+              "label": "ear.R.002",
+              "emphasis": false
+            },
+            {
+              "bone": "ear.R.003",
+              "prePad": 0,
+              "label": "ear.R.003",
+              "emphasis": false
+            },
+            {
+              "bone": "ear.R.004",
+              "prePad": 0,
+              "label": "ear.R.004",
+              "emphasis": false
+            },
+            {
+              "bone": "ear.L",
+              "prePad": 0,
+              "label": "ear.L",
+              "emphasis": true
+            },
+            {
+              "bone": "ear.L.002",
+              "prePad": 0,
+              "label": "ear.L.002",
+              "emphasis": false
+            },
+            {
+              "bone": "ear.L.003",
+              "prePad": 0,
+              "label": "ear.L.003",
+              "emphasis": false
+            },
+            {
+              "bone": "ear.L.004",
+              "prePad": 0,
+              "label": "ear.L.004",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "cheek.B.R.001",
+              "prePad": 0,
+              "label": "cheek.B.R.001",
+              "emphasis": false
+            },
+            {
+              "bone": "nose.R.001",
+              "prePad": 0,
+              "label": "nose.R.001",
+              "emphasis": false
+            },
+            {
+              "bone": "nose_master",
+              "prePad": 0,
+              "label": "nose_master",
+              "emphasis": true
+            },
+            {
+              "bone": "nose.002",
+              "prePad": 0,
+              "label": "nose.002",
+              "emphasis": false
+            },
+            {
+              "bone": "nose.L.001",
+              "prePad": 0,
+              "label": "nose.L.001",
+              "emphasis": false
+            },
+            {
+              "bone": "cheek.B.L.001",
+              "prePad": 0,
+              "label": "cheek.B.L.001",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "lip.T.R.001",
+              "prePad": 0,
+              "label": "lip.T.R.001",
+              "emphasis": false
+            },
+            {
+              "bone": "lip.T",
+              "prePad": 0,
+              "label": "lip.T",
+              "emphasis": false
+            },
+            {
+              "bone": "lip.T.L.001",
+              "prePad": 0,
+              "label": "lip.T.L.001",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "lips.R",
+              "prePad": 0,
+              "label": "lips.R",
+              "emphasis": false
+            },
+            {
+              "bone": "lip.B.R.001",
+              "prePad": 0,
+              "label": "lip.B.R.001",
+              "emphasis": false
+            },
+            {
+              "bone": "lip.B",
+              "prePad": 0,
+              "label": "lip.B",
+              "emphasis": false
+            },
+            {
+              "bone": "lip.B.L.001",
+              "prePad": 0,
+              "label": "lip.B.L.001",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "jaw.R",
+              "prePad": 0,
+              "label": "jaw.R",
+              "emphasis": false
+            },
+            {
+              "bone": "jaw.R.001",
+              "prePad": 0,
+              "label": "jaw.R.001",
+              "emphasis": false
+            },
+            {
+              "bone": "jaw.L.001",
+              "prePad": 0,
+              "label": "jaw.L.001",
+              "emphasis": false
+            },
+            {
+              "bone": "jaw.L",
+              "prePad": 0,
+              "label": "jaw.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "chin.R",
+              "prePad": 0,
+              "label": "chin.R",
+              "emphasis": false
+            },
+            {
+              "bone": "chin",
+              "prePad": 0,
+              "label": "chin",
+              "emphasis": false
+            },
+            {
+              "bone": "jaw",
+              "prePad": 0,
+              "label": "jaw",
+              "emphasis": false
+            },
+            {
+              "bone": "chin.L",
+              "prePad": 0,
+              "label": "chin.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "jaw_master",
+              "prePad": 0,
+              "label": "jaw_master",
+              "emphasis": true
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "neck",
+              "prePad": 0,
+              "label": "neck",
+              "emphasis": true
+            },
+            {
+              "bone": "tweak_spine.005",
+              "prePad": 0,
+              "label": "tweak_spine.005",
+              "emphasis": false
+            }
+          ]
+        }
+      ],
+      "name": "Face"
+    },
+    {
+      "rows": [
+        {
+          "items": [
+            {
+              "bone": "head",
+              "prePad": 0,
+              "label": "head",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "shoulder.R",
+              "prePad": 0,
+              "label": "shoulder.R",
+              "emphasis": false
+            },
+            {
+              "bone": "neck",
+              "prePad": 0,
+              "label": "neck",
+              "emphasis": false
+            },
+            {
+              "bone": "shoulder.L",
+              "prePad": 0,
+              "label": "shoulder.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "hand_fk.R",
+              "prePad": 0,
+              "label": "hand_fk.R",
+              "emphasis": false
+            },
+            {
+              "bone": "forearm_fk.R",
+              "prePad": 0,
+              "label": "forearm_fk.R",
+              "emphasis": false
+            },
+            {
+              "bone": "upper_arm_fk.R",
+              "prePad": 0,
+              "label": "upper_arm_fk.R",
+              "emphasis": false
+            },
+            {
+              "bone": "upper_arm_fk.L",
+              "prePad": 0,
+              "label": "upper_arm_fk.L",
+              "emphasis": false
+            },
+            {
+              "bone": "forearm_fk.L",
+              "prePad": 0,
+              "label": "forearm_fk.L",
+              "emphasis": false
+            },
+            {
+              "bone": "hand_fk.L",
+              "prePad": 0,
+              "label": "hand_fk.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "chest",
+              "prePad": 0,
+              "label": "chest",
+              "emphasis": false
+            },
+            {
+              "bone": "spine_fk.003",
+              "prePad": 0,
+              "label": "spine_fk.003",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "breast.R",
+              "prePad": 0,
+              "label": "breast.R",
+              "emphasis": false
+            },
+            {
+              "bone": "breast.L",
+              "prePad": 0,
+              "label": "breast.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "spine_fk.002",
+              "prePad": 0,
+              "label": "spine_fk.002",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "spine_fk.001",
+              "prePad": 0,
+              "label": "spine_fk.001",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "torso",
+              "prePad": 0,
+              "label": "torso",
+              "emphasis": true
+            },
+            {
+              "bone": "hips",
+              "prePad": 0,
+              "label": "hips",
+              "emphasis": false
+            },
+            {
+              "bone": "spine_fk",
+              "prePad": 0,
+              "label": "spine_fk",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "thigh_ik.R",
+              "prePad": 0,
+              "label": "thigh_ik.R",
+              "emphasis": false
+            },
+            {
+              "bone": "thigh_ik.L",
+              "prePad": 0,
+              "label": "thigh_ik.L",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "toe.R",
+              "prePad": 0,
+              "label": "toe.R",
+              "emphasis": false
+            },
+            {
+              "bone": "foot_fk.R",
+              "prePad": 0,
+              "label": "foot_fk.R",
+              "emphasis": false
+            },
+            {
+              "bone": "shin_fk.R",
+              "prePad": 0,
+              "label": "shin_fk.R",
+              "emphasis": false
+            },
+            {
+              "bone": "thigh_fk.R",
+              "prePad": 0,
+              "label": "thigh_fk.R",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "toe.L",
+              "prePad": 0,
+              "label": "toe.L",
+              "emphasis": false
+            },
+            {
+              "bone": "foot_fk.L",
+              "prePad": 0,
+              "label": "foot_fk.L",
+              "emphasis": false
+            },
+            {
+              "bone": "shin_fk.L",
+              "prePad": 0,
+              "label": "shin_fk.L",
+              "emphasis": false
+            },
+            {
+              "bone": "thigh_fk.L",
+              "prePad": 0,
+              "label": "thigh_fk.L",
+              "emphasis": false
+            }
+          ]
+        }
+      ],
+      "name": "BodyFK"
+    },
+    {
+      "rows": [
+        {
+          "items": [
+            {
+              "bone": "f_index.01_master.R",
+              "prePad": 0,
+              "label": "index",
+              "emphasis": false
+            },
+            {
+              "bone": "f_middle.01_master.R",
+              "prePad": 0,
+              "label": "middle",
+              "emphasis": false
+            },
+            {
+              "bone": "f_ring.01_master.R",
+              "prePad": 0,
+              "label": "ring",
+              "emphasis": false
+            },
+            {
+              "bone": "f_pinky.01_master.R",
+              "prePad": 0,
+              "label": "pinky",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "thumb.01_master.R",
+              "prePad": 0,
+              "label": "thumb",
+              "emphasis": false
+            },
+            {
+              "bone": "palm.R",
+              "prePad": 0,
+              "label": "palm",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "hand_fk.R",
+              "prePad": 0,
+              "label": "hand_fk.R",
+              "emphasis": false
+            },
+            {
+              "bone": "hand_ik.R",
+              "prePad": 0,
+              "label": "hand_ik.R",
+              "emphasis": false
+            }
+          ]
+        }
+      ],
+      "name": "Hand.R"
+    },
+    {
+      "rows": [
+        {
+          "items": [
+            {
+              "bone": "f_index.01_master.L",
+              "prePad": 0,
+              "label": "index",
+              "emphasis": false
+            },
+            {
+              "bone": "f_middle.01_master.L",
+              "prePad": 0,
+              "label": "middle",
+              "emphasis": false
+            },
+            {
+              "bone": "f_ring.01_master.L",
+              "prePad": 0,
+              "label": "ring",
+              "emphasis": false
+            },
+            {
+              "bone": "f_pinky.01_master.L",
+              "prePad": 0,
+              "label": "pinky",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "thumb.01_master.L",
+              "prePad": 0,
+              "label": "thumb",
+              "emphasis": false
+            },
+            {
+              "bone": "palm.L",
+              "prePad": 0,
+              "label": "palm",
+              "emphasis": false
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "bone": "hand_fk.L",
+              "prePad": 0,
+              "label": "hand_fk.L",
+              "emphasis": false
+            },
+            {
+              "bone": "hand_ik.L",
+              "prePad": 0,
+              "label": "hand_ik.L",
+              "emphasis": false
+            }
+          ]
+        }
+      ],
+      "name": "Hand.L"
+    }
+  ],
+  "VERSION": 1
+}
